@@ -1,10 +1,14 @@
 <template name="addProductScreen">
-	{{#ionHeaderBar}}
-		<div class="buttons">
-			<a href="{{pathFor 'homeScreen'}}"><button class="button icon ion-chevron-left button-clear"></button></a>
-		</div>
-		<h1 class="title">Lägg till product</h1>
-	{{/ionHeaderBar}}
+
+	{{#contentFor "headerButtonLeft"}}
+		{{>ionNavBackButton path="homeScreen" text=" "}}
+  	{{/contentFor}}
+
+  	{{#contentFor "headerTitle"}}
+    	<h1 class="title">Lägg till produkt</h1>
+  	{{/contentFor}}
+
+	{{#ionView}}
 	{{#ionContent class="add-product-screen"}}
 		<form class="new-product">
 			{{#ionList class="product"}}
@@ -161,9 +165,10 @@
 					<input type="text" name="general_comment" />
 				{{/ionItem}}
 				{{#ionItem class="item-buttom"}}
-					<button type="submit" class="button button-full button-positive">Skicka</button>
+					<button type="submit" class="button button-full button-calm">Skicka</button>
 				{{/ionItem}}
 			{{/ionList}}
 		</form>
 	{{/ionContent}}
+	{{/ionView}}
 </template>

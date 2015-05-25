@@ -4,7 +4,8 @@ Template.homeScreen.events({
 		if (Meteor.isCordova) {
 			cordova.plugins.barcodeScanner.scan(
 	            function (result) {
-					Router.go('productScreen', {gtin: result.text} );
+	            	if( result.cancelled =! 1 );
+						Router.go('productScreen', {gtin: result.text} );
 	            }, 
 	            function (error) {
 	                alert("Scanning failed: " + error);

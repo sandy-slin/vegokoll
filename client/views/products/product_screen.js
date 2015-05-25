@@ -1,5 +1,6 @@
 Template.productScreen.rendered = function(){
 	if( Products.findOne() === undefined ){
+		/*
 		IonPopup.show({
 			title: 'Hittade inte produkten',
 			template: 'Vill du lägga till produkten i vår databas?',
@@ -22,6 +23,7 @@ Template.productScreen.rendered = function(){
 				}
 			]
 		});
+		*/
 	}
 }
 

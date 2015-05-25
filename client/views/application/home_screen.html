@@ -1,30 +1,37 @@
 <template name="homeScreen">
-	{{#ionContent class="home-screen"}}
-		<div class="slider-wrapper">
-			{{#ionSlideBox showPager}}
-			  {{#ionSlide}}
-			  		<div>
-						<i class="icon ion-camera"></i>
-						<h1>Ta en bild av <br/>produktens steckkod</h1>
-					</div>
-				{{/ionSlide}}
-				{{#ionSlide}}
-			  		<div>
-						<i class="icon ion-ios-paper"></i>
-						<h1>Läs om vad <br/>produkten innehåller</h1>
-					</div>
-				{{/ionSlide}}
-				{{#ionSlide}}
-			  		<div>
-						<i class="icon ion-ios-nutrition"></i>
-						<h1>Ät och njut av din vegetariska mat</h1>
-					</div>
-				{{/ionSlide}}
-			{{/ionSlideBox}}
-		</div>
-		<div class="footer">
-			<button id="take-photo-button" class="button button-block button-calm">Ta en bild</button>
-			<a href="{{pathFor 'infoScreen'}}"><button id="info-button" class="button button-clear">Läs mer om oss</button></a>
-		</div>
-	{{/ionContent}}
+
+  	{{#contentFor "headerTitle"}}
+    	<h1 class="title">100% Vegan</h1>
+  	{{/contentFor}}
+
+	{{#ionView hide-nav-bar="true"}}
+		{{#ionContent class="home-screen"}}
+			<div class="slider-wrapper">
+				{{#ionSlideBox showPager}}
+				  {{#ionSlide}}
+				  		<div>
+							<i class="icon ion-camera"></i>
+							<h1>Ta en bild av <br/>produktens steckkod</h1>
+						</div>
+					{{/ionSlide}}
+					{{#ionSlide}}
+				  		<div>
+							<i class="icon ion-ios-paper"></i>
+							<h1>Läs om vad <br/>produkten innehåller</h1>
+						</div>
+					{{/ionSlide}}
+					{{#ionSlide}}
+				  		<div>
+							<i class="icon ion-ios-nutrition"></i>
+							<h1>Ät och njut av din vegetariska mat</h1>
+						</div>
+					{{/ionSlide}}
+				{{/ionSlideBox}}
+			</div>
+			<div class="footer">
+				<button id="take-photo-button" class="button button-block button-calm">Ta en bild</button>
+				<a href="{{pathFor 'infoScreen'}}"><button id="info-button" class="button button-clear">Läs mer om oss</button></a>
+			</div>
+		{{/ionContent}}
+	{{/ionView}}
 </template>

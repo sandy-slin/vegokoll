@@ -1,12 +1,15 @@
 <template name="infoScreen">
-	{{#ionHeaderBar}}
-		<div class="buttons">
-			<a href="{{pathFor 'homeScreen'}}"><button class="button icon ion-chevron-left button-clear"></button></a>
-		</div>
-		<h1 class="title">Om veganScan</h1>
-	{{/ionHeaderBar}}
+	{{#contentFor "headerButtonLeft"}}
+		{{>ionNavBackButton path="homeScreen" text=" "}}
+  	{{/contentFor}}
+
+  	{{#contentFor "headerTitle"}}
+    	<h1 class="title">Om 100% Vegan</h1>
+  	{{/contentFor}}
+
+	{{#ionView}}
 	{{#ionContent class="info-screen padding"}}
-		<h2>Om veganScan</h2>
+		<h2>Om 100% Vegan</h2>
 		<p>Vår databas har möjlighet att samla in samtliga produkter på marknaden men vi fokuserar på produkter som är veganska eller kallas vegetariska (ovo/lakto), samt produkter med väldigt små mängder animaliska ingredienser liksom produktkategorier där det finns stor efterfrågan på information om vilka som är veganska (t.ex. fikabröd, chips).</p>
 		<h2>Huvudkategorier (med symboler)</h2>
 		<ul>
@@ -34,4 +37,5 @@
 			<li>Kött, ägg, djurmjölksprodukter</li>
 		</ul>
 	{{/ionContent}}
+	{{/ionView}}
 </template>

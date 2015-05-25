@@ -1,5 +1,8 @@
 <template name="layout">
-	{{#ionBody}}
+{{#ionBody}}
+	{{> ionNavBar class="bar-calm"}}
+	{{#ionNavView}}
 		{{> yield}}
-	{{/ionBody}}
+	{{/ionNavView}}
+{{/ionBody}}
 </template>

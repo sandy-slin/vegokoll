@@ -1,0 +1,37 @@
+<template name="infoScreen">
+	{{#ionHeaderBar}}
+		<div class="buttons">
+			<a href="{{pathFor 'homeScreen'}}"><button class="button icon ion-chevron-left button-clear"></button></a>
+		</div>
+		<h1 class="title">Om veganScan</h1>
+	{{/ionHeaderBar}}
+	{{#ionContent class="info-screen padding"}}
+		<h2>Om veganScan</h2>
+		<p>Vår databas har möjlighet att samla in samtliga produkter på marknaden men vi fokuserar på produkter som är veganska eller kallas vegetariska (ovo/lakto), samt produkter med väldigt små mängder animaliska ingredienser liksom produktkategorier där det finns stor efterfrågan på information om vilka som är veganska (t.ex. fikabröd, chips).</p>
+		<h2>Huvudkategorier (med symboler)</h2>
+		<ul>
+			<li>Vegan Produkten består helt av vegetabilier utan något inslag från djurriket, alltså varken kött, fisk, skaldjur, mjölkprodukter, ägg eller honung. Här räknas inte exempelvis förpackning in.</li>
+			<li>Vegan* Vegansk produkt som innehåller e-ämnen som kan ha animaliskt ursprung. Om det finns information från företaget som bekräftar att e-ämnets ursprung inte är animaliskt ska informationen finnas i faktatexten. Annars ska det vara märkt som okänt ursprung.</li>
+			<li>Inte vegan Produkter som räknas inom Livsmedelsverkets definition av vegetariskt mat men som innehåller mjölk, ägg, honung och/eller e-ämnen. Underkategorier (visas under produktnamnet, inte som symboler):</li>
+			<ul>
+				<li>Ovo-vegetariskt = Produkten innehåller vegetabilier och äggprodukter.</li>
+				<li>Lakto-vegetariskt = Produkten innehåller vegetabilier och mjölkprodukter.</li>
+				<li>Lakto- ovo-vegetariskt = Produkten innehåller vegetabilier, mjölkprodukter och även ägg.</li>
+				<li>Övriga animaliska ingredienser = Produkten innehåller ex. animaliskt fett, bekräftade animaliska E-nummer, honung, D-vitamin, bivax eller karmin (E120). Här bör det framgå vilka animaliska produkter den innehåller (så som bivax, animaliskt D-vitamin etc.) så att det blir upp till användaren att dra sin egen gräns. För E120 bör det anges om det gäller hela produkten eller delar av den (t.ex. en röd godis eller en godispåse där det finns enstaka röda delar innehållandes E120).</li>
+			</ul>
+		</ul>
+		<h2>Övrig information (symboler) – förpackning eller företag har angett att produkten är</h2>
+		<ul>
+			<li>Glutenfri</li>
+			<li>Spår av mjölk</li>
+			<li>Spår av ägg</li>
+			<li>Ekologisk</li>
+			<li>Märkt med "100% VEGANSKT®. Godkänd av Djurens Rätt"</li>
+		</ul>
+		<h2>Produkter som inte ska finnas i databasen/appen </h2>
+		<ul>
+			<li>Livsmedel som mjöl, frukt, grönsaker etc.</li>
+			<li>Kött, ägg, djurmjölksprodukter</li>
+		</ul>
+	{{/ionContent}}
+</template>

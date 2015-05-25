@@ -1,0 +1,46 @@
+<template name="productScreen">
+	{{#ionHeaderBar}}
+		<div class="buttons">
+			<a href="{{pathFor 'homeScreen'}}"><button class="button icon ion-chevron-left button-clear"></button></a>
+		</div>
+		<h1 class="title">Produktinformation</h1>
+	{{/ionHeaderBar}}
+	{{#ionContent class="product-screen"}}
+		{{#if foundProduct}}
+			{{#ionList class="product"}}
+				{{#ionItem class="text-center"}}
+					<p><img class="veg-icon" src="/images/{{veganOrNot}}" /></p>
+				{{/ionItem}}
+				{{#ionItem}}
+					<h1>{{title}}</h1>
+					<p>{{subtitle}}</p>
+				{{/ionItem}}
+				{{#ionItem}}
+					<label for="brand">Tillverkare</label>
+					<p name="brand">{{brand}}</p>
+				{{/ionItem}}
+				{{#ionItem}}
+					<label for="category">Kategori</label>
+					<p name="category">{{categoryName}}</p>
+				{{/ionItem}}
+				{{#ionItem}}
+					<label for="gtin">EAN Kod</label>
+					<p name="gtin">{{gtin}}</p>
+				{{/ionItem}}
+				{{#if general_comment}}
+					{{#ionItem class="item-text-wrap"}}
+						<label for="general_comment">Kommentar</label>
+						<p name="general_comment">{{general_comment}}</p>
+					{{/ionItem}}
+				{{/if}}
+				{{#ionItem class="markers"}}
+					<div class="row">
+						<div class="col {{glutenFreeClass}}"><img src="/images/icon-glutenfree.png" /></div>
+						<div class="col {{organicClass}}"><img src="/images/icon-organic.png" /></div>
+						<div class="col {{lactoseClass}}"><img src="/images/icon-lactosefree.png" /></div>
+					</div>
+				{{/ionItem}}
+			{{/ionList}}
+		{{/if}}
+	{{/ionContent}}
+</template>

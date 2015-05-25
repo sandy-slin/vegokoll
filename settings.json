@@ -1,0 +1,5 @@
+{
+    "env": {
+        "MONGO_URL" : "mongodb://heroku_app34090386:kttb2of65uparr23te42om0s17@ds057000.mongolab.com:57000/heroku_app34090386"
+    }
+}

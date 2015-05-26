@@ -1,5 +1,5 @@
 App.info({
-  id: 'com.klandestino.veganscan',
+  id: 'com.klandestino.hundraprocentvegan',
   name: '100% Vegan',
   description: 'Debug version of 100% Vegan',
   author: 'Klandestino AB',

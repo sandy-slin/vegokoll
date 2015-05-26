@@ -8,6 +8,7 @@ Template.addProductScreen.helpers({
 Template.addProductScreen.events({
 	'submit .new-product': function(event) {
 		var title = event.target.title.value;
+		var subtitle = '';
 		var gtin = parseInt(event.target.gtin.value);
 		var brand = event.target.brand.value;
 		var category = event.target.category.value;
@@ -18,11 +19,12 @@ Template.addProductScreen.events({
 		var additives_may_come_from_animal_origin = event.target.additives_may_come_from_animal_origin.checked;
 		var gluten_free = event.target.gluten_free.checked;
 
-		var contains_traces_of_milk = event.target.traces_of_milk.checked;
-		var contains_traces_of_eggs = event.target.traces_of_eggs.checked;
+		var contains_traces_of_milk = event.target.contains_traces_of_milk.checked;
+		var contains_traces_of_eggs = event.target.contains_traces_of_eggs.checked;
 
 		var manufacturer_confirms_vegetarian = event.target.manufacturer_confirms_vegetarian.checked;
 		var manufacturer_confirms_vegan = event.target.manufacturer_confirms_vegan.checked;
+		var hundred_procent_vegan = false;
 		var general_comment = event.target.general_comment.value;
 		var organic = event.target.organic.checked;
 
@@ -31,7 +33,7 @@ Template.addProductScreen.events({
 		if ( title === '' || brand === '' || gtin === '' || category === '' ){
 			IonPopup.alert({
 				title: 'För lite information!',
-				template: 'Fyll gärna i produktens namn, tillverkare och välj kategori så vi snabbare kan lägga till produkten.',
+				template: 'Fyll gärna i produktens <strong>namn</strong>, <strong>tillverkare</strong> och välj <strong>kategori</strong> så vi snabbare kan lägga till produkten.',
 				okText: 'Ok!',
 				okType: 'button-positive'
 			});
@@ -52,8 +54,8 @@ Template.addProductScreen.events({
 					contains_animal_ingredients : contains_animal_ingredients
 				},
 				other: {
-					contains_traces_of_milk : traces_of_milk,
-					contains_traces_of_eggs : traces_of_eggs,
+					contains_traces_of_milk : contains_traces_of_milk,
+					contains_traces_of_eggs : contains_traces_of_eggs,
 					animal_tested: false,
 					organic: organic
 				},

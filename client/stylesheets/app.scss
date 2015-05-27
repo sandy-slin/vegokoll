@@ -5,6 +5,10 @@ a, a:active, a:visited, a:hover {
 	text-decoration: none;
 }
 
+.bar.bar-calm, .button.button-calm, .button.button-calm.active, .button.button-calm.activated {
+	background-color: #00a7d4;
+}
+
 /**
  * Home Screen
  */

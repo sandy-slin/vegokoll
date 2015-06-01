@@ -1,15 +1,5 @@
 <template name="addProductScreen">
 
-	{{#contentFor "headerButtonLeft"}}
-		{{>ionNavBackButton path="homeScreen" text=" "}}
-  	{{/contentFor}}
-
-  	{{#contentFor "headerTitle"}}
-    	<h1 class="title">Lägg till produkt</h1>
-  	{{/contentFor}}
-
-	{{#ionView}}
-		{{#ionContent class="add-product-screen"}}
 			<form class="new-product">
 				{{#ionList class="product"}}
 					{{#ionItem class="item-text-wrap"}}
@@ -169,6 +159,4 @@
 					{{/ionItem}}
 				{{/ionList}}
 			</form>
-		{{/ionContent}}
-	{{/ionView}}
 </template>

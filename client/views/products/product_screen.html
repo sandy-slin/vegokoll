@@ -16,12 +16,12 @@
 						<p><img class="veg-icon" src="/images/{{veganOrNot}}" /></p>
 					{{/ionItem}}
 					{{#ionItem}}
-						<h1>{{title}}</h1>
-						<p>{{subtitle}}</p>
+						<h1>{{product.title}}</h1>
+						<p>{{product.subtitle}}</p>
 					{{/ionItem}}
 					{{#ionItem}}
 						<label for="brand">Tillverkare</label>
-						<p name="brand">{{brand}}</p>
+						<p name="brand">{{product.brand}}</p>
 					{{/ionItem}}
 					{{#ionItem}}
 						<label for="category">Kategori</label>
@@ -29,12 +29,12 @@
 					{{/ionItem}}
 					{{#ionItem}}
 						<label for="gtin">EAN Kod</label>
-						<p name="gtin">{{gtin}}</p>
+						<p name="gtin">{{product.gtin}}</p>
 					{{/ionItem}}
-					{{#if general_comment}}
+					{{#if product.general_comment}}
 						{{#ionItem class="item-text-wrap"}}
 							<label for="general_comment">Kommentar</label>
-							<p name="general_comment">{{general_comment}}</p>
+							<p name="general_comment">{{product.general_comment}}</p>
 						{{/ionItem}}
 					{{/if}}
 					{{#ionItem class="markers"}}
@@ -45,6 +45,8 @@
 						</div>
 					{{/ionItem}}
 				{{/ionList}}
+			{{else}}
+				{{> addProductScreen}}
 			{{/if}}
 		{{/ionContent}}
 	{{/ionView}}

@@ -17,7 +17,7 @@ Router.map(function() {
     	}
     });
 	this.route('productScreen', { 
-		path: '/products/:gtin',
+		path: '/product/:gtin',
 		onBeforeAction: function() {
     		$('body').removeClass('hidenav');
     		this.next();
@@ -26,7 +26,10 @@ Router.map(function() {
 			return [ Meteor.subscribe('product', parseInt(this.params.gtin)), Meteor.subscribe('categories') ];
 		},
 		data: function(){
-			return Products.findOne();
+			return {
+				product: Products.findOne(),
+				categories: Categories.find()
+			};
 		},
 		action: function () {
 			if (this.ready()) {

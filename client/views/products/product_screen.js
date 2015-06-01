@@ -16,8 +16,6 @@ Template.productScreen.rendered = function(){
 					text: 'Lägg till',
 					type: 'button-calm',
 					onTap: function(event, template) {
-					    var gtin = Router.current().params['gtin'];
-						Router.go('/add-product/'+gtin);
 						return true;
 					}
 				}
@@ -35,35 +33,39 @@ Template.productScreen.helpers({
 			return true;
 	},
 	veganOrNot: function () {
-		if ( this.hundred_procent_vegan == true )
+		var product = this.product;
+		if ( product.hundred_procent_vegan == true )
 			return 'icon-100-vegan.png';
-		else if ( this.manufacturer_confirms_vegan || ( this.ingredients.additives_may_come_from_animal_origin != true && this.ingredients.contains_animal_additives != true && this.ingredients.contains_eggs != true && this.ingredients.contains_animal_milk != true && this.ingredients.contains_animal_ingredients != true ) )
+		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin != true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients != true ) )
 			return 'icon-vegan.png';
-		else if ( this.manufacturer_confirms_vegan || ( this.ingredients.additives_may_come_from_animal_origin == true && this.ingredients.contains_animal_additives != true && this.ingredients.contains_eggs != true && this.ingredients.contains_animal_milk != true && this.ingredients.contains_animal_ingredients  != true ) )
+		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin == true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients  != true ) )
 			return 'icon-maybe-vegan.png';
 		else
 			return 'icon-lacto-vegetarian.png';
 	},
 	glutenFreeClass: function () {
-		if ( this.ingredients.gluten_free == true )
+		var product = this.product;
+		if ( product.ingredients.gluten_free == true )
 			return 'active';
 		else
 			return 'inactive';
 	},
 	organicClass: function () {
-		if ( this.other.organic == true )
+		var product = this.product;
+		if ( product.other.organic == true )
 			return 'active';
 		else
 			return 'inactive';
 	},
 	lactoseCLass: function () {
-		if ( this.ingredients.contains_animal_milk != true && this.other.contains_traces_of_milk != true )
+		var product = this.product;
+		if ( product.ingredients.contains_animal_milk != true && product.other.contains_traces_of_milk != true )
 			return 'active';
 		else
 			return 'inactive';
 	},
 	categoryName: function () {
-		var category = Categories.findOne({code: this.category});
+		var category = Categories.findOne({code: this.product.category});
 		return category.name;
 	}
 });

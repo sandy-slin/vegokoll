@@ -41,7 +41,28 @@ Template.productScreen.helpers({
 		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin == true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients  != true ) )
 			return 'icon-maybe-vegan.png';
 		else
-			return 'icon-lacto-vegetarian.png';
+			return 'icon-novegan.png';
+	},
+	lactoClass: function () {
+		var product = this.product;
+		if ( product.ingredients.contains_animal_milk == true )
+			return 'active';
+		else
+			return 'inactive';
+	},
+	ovoClass: function () {
+		var product = this.product;
+		if ( product.ingredients.contains_eggs == true )
+			return 'active';
+		else
+			return 'inactive';
+	},
+	otherClass: function () {
+		var product = this.product;
+		if ( product.ingredients.additives_may_come_from_animal_origin == true || product.ingredients.contains_animal_ingredients == true )
+			return 'active';
+		else
+			return 'inactive';
 	},
 	glutenFreeClass: function () {
 		var product = this.product;

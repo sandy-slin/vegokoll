@@ -1,22 +1,34 @@
 App.info({
-  id: 'com.klandestino.hundraprocentvegan',
-  name: '100% Vegan',
-  description: 'Debug version of 100% Vegan',
-  author: 'Klandestino AB',
-  email: 'kontakt@klandestino.se',
-  website: 'http://klandestino.se'
+	id: 'com.klandestino.hundraprocentveganskt',
+	name: '100% Veganskt',
+	description: 'Debug version of 100% Veganskt',
+	author: 'Klandestino AB',
+	email: 'kontakt@klandestino.se',
+	website: 'http://klandestino.se'
 });
 
 App.icons({
-  'android_ldpi': 'private/icon-android-ldpi.png',
-  'android_mdpi': 'private/icon-android-mdpi.png',
-  'android_hdpi': 'private/icon-android-hdpi.png',
-  'android_xhdpi': 'private/icon-android-xhdpi.png',
+	// iOS
+	'iphone': 'public/images/favicons/apple-touch-icon-60x60.png',
+	'iphone_2x': 'public/images/favicons/apple-touch-icon-120x120.png',
+	'iphone_3x': 'public/images/favicons/apple-touch-icon-180x180.png',
+	'ipad': 'public/images/favicons/apple-touch-icon-76x76.png',
+	'ipad_2x': 'public/images/favicons/apple-touch-icon-152x152.png',
+
+	// Android
+	'android_ldpi': 'public/images/favicons/android-chrome-36x36.png',
+	'android_mdpi': 'public/images/favicons/android-chrome-48x48.png',
+	'android_hdpi': 'public/images/favicons/android-chrome-72x72.png',
+	'android_xhdpi': 'public/images/favicons/android-chrome-96x96.png'
 });
 
 App.launchScreens({
-  'android_hdpi_portrait': 'private/splash-port-android-hdpi.png',
-  'android_hdpi_landscape': 'private/splash-android-hdpi.png',
-  'android_xhdpi_portrait': 'private/splash-port-android-xhdpi.png',
-  'android_xhdpi_landscape': 'private/splash-android-xhdpi.png',
+	// iOS
+	'iphone': 'public/images/splash/iphone/Default.png',
+	'iphone_2x': 'public/images/splash/iphone/Default@2x.png',
+	'iphone5': 'public/images/splash/iphone/Default-568h@2x.png',
+	'ipad_portrait': 'public/images/splash/iphone/Default-Portrait.png',
+	'ipad_portrait_2x': 'public/images/splash/iphone/Default-Portrait@2x.png',
+	'ipad_landscape': 'public/images/splash/iphone/Default-Landscape.png',
+	'ipad_landscape_2x': 'public/images/splash/iphone/Default-Landscape@2x.png'
 });

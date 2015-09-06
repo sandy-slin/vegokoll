@@ -1,31 +1,3 @@
-Template.productScreen.rendered = function(){
-	if( Products.findOne() === undefined ){
-/*
-		IonPopup.show({
-			title: 'Hittade inte produkten',
-			template: 'Vill du lägga till produkten i vår databas?',
-			buttons: [
-				{
-					text: 'Ta ny bild',
-					onTap: function(event, template) {
-						Router.go('homeScreen');
-						return true;
-					}
-				},
-				{
-					text: 'Lägg till',
-					type: 'button-calm',
-					onTap: function(event, template) {
-						return true;
-					}
-				}
-			]
-		});
-	
-	*/	
-	}
-}
-
 Template.productScreen.helpers({ 
 	foundProduct: function () {
 		if( Products.findOne() === undefined )

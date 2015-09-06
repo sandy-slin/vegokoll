@@ -74,12 +74,11 @@ Template.addProductModal.events({
 				approved: approved
 			};
 
-			var result = Meteor.call('insertproduct', product);
-			alert(result);
+			Meteor.call('insertproduct', product);
 
 			IonPopup.alert({
 				title: 'Klart!',
-				template: 'Tack för att du hjälper oss att skapa en bättre vegetarisk värld.',
+				template: 'Tack för att du hjälper oss att skapa en bättre vegansk värld.',
 				okText: 'Tillbaka',
 				okType: 'button-positive',
 				onOk: function() {

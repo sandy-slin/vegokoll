@@ -1,6 +1,6 @@
 Template.productScreen.rendered = function(){
 	if( Products.findOne() === undefined ){
-
+/*
 		IonPopup.show({
 			title: 'Hittade inte produkten',
 			template: 'Vill du lägga till produkten i vår databas?',
@@ -21,7 +21,8 @@ Template.productScreen.rendered = function(){
 				}
 			]
 		});
-		
+	
+	*/	
 	}
 }
 
@@ -31,6 +32,13 @@ Template.productScreen.helpers({
 			return false;
 		else
 			return true;
+	},
+	productUnapproved: function () {
+		var product = this.product;
+		if ( product && product.approved == false )
+			return true;
+		else
+			return false;
 	},
 	veganOrNot: function () {
 		var product = this.product;

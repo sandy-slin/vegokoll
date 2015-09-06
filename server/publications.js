@@ -1,11 +1,15 @@
 Meteor.publish('product', function(gtin){ 
-	return Products.find({'gtin': gtin, approved: true});
+	return Products.find({'gtin': gtin});
 });
+
 Meteor.publish('categories', function(){ 
 	return Categories.find();
 });
 
 Products.allow({
+	insert: function () {
+		return true;
+	},
 	remove: false,
 	update: false
 });

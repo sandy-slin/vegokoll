@@ -1,14 +1,22 @@
-Template.addProductScreen.helpers({ 
+Template.addProductModal.helpers({ 
 	gtin: function () {
 		var gtin = Router.current().params['gtin'];
 		return gtin;
+	},
+	categories: function () {
+		return Categories.find();
 	}
 });
 
-Template.addProductScreen.events({
+Template.addProductModal.events({
 	'submit .new-product': function(event) {
+		var modal = $(event.currentTarget).parents('.modal').get(0);
+		var modalView = Blaze.getView(modal);
+		var tplView = Meteor._get(modalView, 'parentView', 'parentView'); // Twice because the parent view is a #with block
+		var tplName = tplView.name.slice('Template.'.length, tplView.name.length);
+
 		var title = event.target.title.value;
-		var subtitle = '';
+		var subtitle = event.target.subtitle.value;
 		var gtin = parseInt(event.target.gtin.value);
 		var brand = event.target.brand.value;
 		var category = event.target.category.value;
@@ -66,7 +74,8 @@ Template.addProductScreen.events({
 				approved: approved
 			};
 
-			Products.insert(product);
+			var result = Meteor.call('insertproduct', product);
+			alert(result);
 
 			IonPopup.alert({
 				title: 'Klart!',
@@ -74,7 +83,7 @@ Template.addProductScreen.events({
 				okText: 'Tillbaka',
 				okType: 'button-positive',
 				onOk: function() {
-					Router.go('homeScreen');
+					IonModal.close( tplName );
 				}
 			});
 

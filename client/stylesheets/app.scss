@@ -176,7 +176,13 @@ a, a:hover, a:visited, a:active {
 			}
 		}
 		img {
+			margin-top: .5em;
 			max-width: 100%;
+		}
+	}
+	.item {
+		p {
+			white-space: normal;
 		}
 	}
 }

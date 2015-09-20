@@ -16,6 +16,12 @@ Template.productScreen.helpers({
 		var product = this.product;
 		if ( product.hundred_procent_vegan == true )
 			return 'icon-100-vegan.png';
+		else if ( product.ingredients.contains_eggs )
+			return 'icon-ovo.png';
+		else if ( product.ingredients.contains_animal_milk )
+			return 'icon-lacto.png';
+		else if ( product.ingredients.contains_animal_ingredients )
+			return 'icon-novegan.png';
 		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin != true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients != true ) )
 			return 'icon-vegan.png';
 		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin == true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients  != true ) )

@@ -46,10 +46,16 @@
 					{{/if}}
 					{{#ionItem class="markers"}}
 						<label>Innehållsinformation</label>
+						{{#if product.other.contains_traces_of_eggs}}
+							<p>Kan innehålla spår av ägg.</p>
+						{{/if}}
+						{{#if product.other.contains_traces_of_milk}}
+							<p>Kan innehålla spår av mjölk.</p>
+						{{/if}}
+						{{#if product.ingredients.additives_may_come_from_animal_origin}}
+							<p>Produkten innehåller ingredienser som i sällsynta fall har animaliskt ursprung.</p>
+						{{/if}}
 						<div class="row">
-							<div class="col {{lactoClass}}"><img src="/images/icon-lacto.png" /></div>
-							<div class="col {{ovoClass}}"><img src="/images/icon-ovo.png" /></div>
-							<div class="col {{otherClass}}"><img src="/images/icon-other.png" /></div>
 							<div class="col {{glutenFreeClass}}"><img src="/images/icon-glutenfree.png" /></div>
 							<div class="col {{organicClass}}"><img src="/images/icon-organic.png" /></div>
 							<div class="col {{lactoseClass}}"><img src="/images/icon-lactosefree.png" /></div>

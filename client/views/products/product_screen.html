@@ -46,6 +46,15 @@
 					{{/if}}
 					{{#ionItem class="markers"}}
 						<label>Innehållsinformation</label>
+						{{#if product.ingredients.contains_eggs}}
+							<p>Innehåller ägg.</p>
+						{{/if}}
+						{{#if product.ingredients.contains_animal_milk}}
+							<p>Innehåller mjölkprodukter.</p>
+						{{/if}}
+						{{#if product.ingredients.contains_animal_ingredients}}
+							<p>Innehåller animaliska ingredienser.</p>
+						{{/if}}
 						{{#if product.other.contains_traces_of_eggs}}
 							<p>Kan innehålla spår av ägg.</p>
 						{{/if}}

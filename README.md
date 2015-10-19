@@ -3,6 +3,7 @@ A meteor.js app that uses GTIN to check if a product is vegan or not. Built for 
 
 Please report issues or send in your own pull requests if you find bugs or have ideas for new features.
 
+
 ## Installation
 
 	$ git clone https://github.com/redundans/hundraprocentveganskt.git

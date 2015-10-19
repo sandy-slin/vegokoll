@@ -1,6 +1,17 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
+@font-face {
+  font-family: 'ITCBaileySansCom-Bold';
+  src: url('/fonts/ITCBaileySansCom-Bold.eot?#iefix') format('embedded-opentype'),  url('/fonts/ITCBaileySansCom-Bold.woff') format('woff'), url('/fonts/ITCBaileySansCom-Bold.ttf')  format('truetype'), url('/fonts/ITCBaileySansCom-Bold.svg#ITCBaileySansCom-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, .button {
+	font-family: 'ITCBaileySansCom-Bold';
+}
+
 a, a:active, a:visited, a:hover {
 	text-decoration: none;
 }
@@ -139,7 +150,7 @@ a, a:hover, a:visited, a:active {
 			color: #ffffff;
 
 			height: 20px;
-			padding: 0;
+			padding: 0 1rem;
 		}
 	}
 }
@@ -234,6 +245,7 @@ form {
 
 	img {
 		max-width: 100%;
+		margin-top: 0.25rem;
 	}
 	
 	.row {

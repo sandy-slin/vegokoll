@@ -1,34 +1,47 @@
 App.info({
-	id: 'com.klandestino.hundraprocentveganskt',
+	id: 'com.djurensratt.hundraprocentveganskt',
 	name: '100% Veganskt',
-	description: 'Debug version of 100% Veganskt',
-	author: 'Klandestino AB',
-	email: 'kontakt@klandestino.se',
-	website: 'http://klandestino.se'
+	description: 'A app that let you check if a product is 100% vegan.',
+	author: 'Djurens Rätt',
+	email: 'info@djurensratt.se',
+	website: 'http://www.djurensratt.se',
+	version: '1.0'
 });
 
 App.icons({
 	// iOS
-	'iphone': 'public/images/favicons/apple-touch-icon-60x60.png',
-	'iphone_2x': 'public/images/favicons/apple-touch-icon-120x120.png',
-	'iphone_3x': 'public/images/favicons/apple-touch-icon-180x180.png',
-	'ipad': 'public/images/favicons/apple-touch-icon-76x76.png',
-	'ipad_2x': 'public/images/favicons/apple-touch-icon-152x152.png',
+	'iphone_2x': 'assets/iOS/Resources/icons/Icon-120.png',
+	'iphone_3x': 'assets/iOS/Resources/icons/Icon-180@3x.png',
+	'ipad': 'assets/iOS/Resources/icons/Icon-76.png',
+	'ipad_2x': 'assets/iOS/Resources/icons/Icon-152.png',
 
 	// Android
-	'android_ldpi': 'public/images/favicons/android-chrome-36x36.png',
-	'android_mdpi': 'public/images/favicons/android-chrome-48x48.png',
-	'android_hdpi': 'public/images/favicons/android-chrome-72x72.png',
-	'android_xhdpi': 'public/images/favicons/android-chrome-96x96.png'
+	'android_ldpi': 'assets/Android/res/drawable-ldpi/icon.png',
+	'android_mdpi': 'assets/Android/res/drawable-mdpi/icon.png',
+	'android_hdpi': 'assets/Android/res/drawable-hdpi/icon.png',
+	'android_xhdpi': 'assets/Android/res/drawable-xhdpi/icon.png'
 });
 
 App.launchScreens({
 	// iOS
-	'iphone': 'public/images/splash/iphone/Default.png',
-	'iphone_2x': 'public/images/splash/iphone/Default@2x.png',
-	'iphone5': 'public/images/splash/iphone/Default-568h@2x.png',
-	'ipad_portrait': 'public/images/splash/iphone/Default-Portrait.png',
-	'ipad_portrait_2x': 'public/images/splash/iphone/Default-Portrait@2x.png',
-	'ipad_landscape': 'public/images/splash/iphone/Default-Landscape.png',
-	'ipad_landscape_2x': 'public/images/splash/iphone/Default-Landscape@2x.png'
+	'iphone_2x': 'assets/iOS/Resources/splash/Default@2x~iphone_640x960.png',
+	'iphone5': 'assets/iOS/Resources/splash/Default@2x~iphone_640x960.png',
+	'iphone6': 'assets/iOS/Resources/splash/Default-750@2x~iphone6-portrait_750x1334.png',
+	'iphone6p_portrait': 'assets/iOS/Resources/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png',
+	'iphone6p_landscape': 'assets/iOS/Resources/splash/Default-1242@3x~iphone6s-landscape_2208x1242.png',
+	'ipad_portrait': 'assets/iOS/Resources/splash/Default-Portrait~ipad_768x1024.png',
+	'ipad_portrait_2x': 'assets/iOS/Resources/splash/Default-Portrait@2x~ipad_1536x2048.png',
+	'ipad_landscape': 'assets/iOS/Resources/splash/Default-Landscape~ipad_1024x748.png',
+	'ipad_landscape_2x': 'assets/iOS/Resources/splash/Default-Landscape@2x~ipad_2048x1536.png',
+
+	// Android
+	'android_ldpi_portrait': 'assets/Android/res/drawable-ldpi/screen.png',
+	'android_ldpi_landscape': 'assets/Android/res/drawable-land-ldpi/screen.png',
+	'android_mdpi_portrait': 'assets/Android/res/drawable-mdpi/screen.png',
+	'android_mdpi_landscape': 'assets/Android/res/drawable-land-mdpi/screen.png',
+	'android_hdpi_portrait': 'assets/Android/res/drawable-hdpi/screen.png',
+	'android_hdpi_landscape': 'assets/Android/res/drawable-land-hdpi/screen.png',
+	'android_xhdpi_portrait': 'assets/Android/res/drawable-xhdpi/screen.png',
+	'android_xhdpi_landscape': 'assets/Android/res/drawable-land-xhdpi/screen.png'
+
 });

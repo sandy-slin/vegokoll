@@ -1,0 +1,167 @@
+<template name="addProductModal">
+	{{#ionModal title="Lägg till produkt"}}
+		<form class="new-product">
+			{{#ionList class="product"}}
+				{{#ionItem class="item-text-wrap"}}
+					<p>Fyll i formuläret nedan med den infromation som finns på produktens förpackning och skicka in till oss, så fixar vi resten.</p>
+				{{/ionItem}}
+				{{#ionItem class="item-stacked-label"}}
+					<span class="input-label">EAN-nummer</span>
+					<input type="text" name="gtin" value="{{gtin}}" />
+				{{/ionItem}}
+				{{#ionItem class="item-divider"}}
+					Produktinformation
+				{{/ionItem}}
+				{{#ionItem class="item-input item-stacked-label"}}
+					<span class="input-label">Produktnamn</span>
+					<input type="text" name="title" />
+				{{/ionItem}}
+				{{#ionItem class="item-input item-stacked-label"}}
+					<span class="input-label">Underrubrik</span>
+					<input type="text" name="subtitle" />
+				{{/ionItem}}
+				{{#ionItem class="item-input item-stacked-label"}}
+					<span class="input-label">Tillverkare</span>
+					<input type="text" name="brand" />
+				{{/ionItem}}
+				{{#ionItem class="item-input item-select"}}
+					<span class="input-label">Kategori</span>
+					<select name="category">
+						{{#each categories}}
+						<option value="{{code}}">{{name}}</option>
+						{{/each}}
+					</select>
+				{{/ionItem}}
+				{{#ionItem class="item-divider"}}
+					Innehåll
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Mjölk
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="contains_animal_milk" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Ägg
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="contains_eggs" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Andra animaliska ingredienser
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="contains_animal_ingredients" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-divider"}}
+					Allargiinformation
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Spår av mjölk
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="contains_traces_of_milk" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Spår av ägg
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="contains_traces_of_eggs" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Tillsatser som kan ha animaliskt ursprung
+					</p>
+					<label class="toggle toggle-assertive">
+						<input type="checkbox" name="additives_may_come_from_animal_origin" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-divider"}}
+					Märkningar på förpackningen
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Glutenfri
+					</p>
+					<label class="toggle toggle-balanced">
+						<input type="checkbox" name="gluten_free" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Vegan
+					</p>
+					<label class="toggle toggle-balanced">
+						<input type="checkbox" name="manufacturer_confirms_vegan" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Vegetarisk (lakto-ovo)
+					</p>
+					<label class="toggle toggle-balanced">
+						<input type="checkbox" name="manufacturer_confirms_vegetarian" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-input item-toggle"}}
+					<p class="label">
+						Ekologisk
+					</p>
+					<label class="toggle toggle-balanced">
+						<input type="checkbox" name="organic" />
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				{{/ionItem}}
+				{{#ionItem class="item-divider"}}
+					Allmänt
+				{{/ionItem}}
+				{{#ionItem class="item-input item-stacked-label"}}
+					<span class="input-label">Kommentar</span>
+					<input type="text" name="general_comment" />
+				{{/ionItem}}
+				{{#ionItem class="item-buttom"}}
+					<button type="submit" class="button button-full button-calm">Skicka</button>
+				{{/ionItem}}
+			{{/ionList}}
+		</form>
+	{{/ionModal}}
+</template>

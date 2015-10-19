@@ -6,20 +6,17 @@ Router.configure({
 Router.map(function() { 
 	this.route('homeScreen', {path: '/',
 		onBeforeAction: function() {
-    		$('body').addClass('hidenav');
     		this.next();
     	}
     });
 	this.route('infoScreen', {path: '/info',
 		onBeforeAction: function() {
-    		$('body').removeClass('hidenav');
     		this.next();
     	}
     });
 	this.route('productScreen', { 
 		path: '/product/:gtin',
 		onBeforeAction: function() {
-    		$('body').removeClass('hidenav');
     		this.next();
     	},
 		subscriptions: function() {
@@ -42,7 +39,6 @@ Router.map(function() {
 	this.route('addProductScreen', { 
 		path: '/add-product/:gtin',
 		onBeforeAction: function() {
-    		$('body').removeClass('hidenav');
     		this.next();
     	},
 		subscriptions: function() {

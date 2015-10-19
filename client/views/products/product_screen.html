@@ -1,5 +1,7 @@
 <template name="productScreen">
 
+	{{> ionNavBar class="bar-calm"}}
+
 	{{#contentFor "headerButtonLeft"}}
 		{{>ionNavBackButton path="homeScreen" text=" "}}
   	{{/contentFor}}
@@ -9,6 +11,13 @@
   	{{/contentFor}}
 
 	{{#ionView}}
+
+		{{#if productUnapproved}}
+		{{#ionSubheaderBar class="bar-energized"}}
+			<h2 class="title">Väntar på godkännande!</h2>
+		{{/ionSubheaderBar}}
+		{{/if}}
+
 		{{#ionContent class="product-screen"}}
 			{{#if foundProduct}}
 				{{#ionList class="product"}}
@@ -38,6 +47,25 @@
 						{{/ionItem}}
 					{{/if}}
 					{{#ionItem class="markers"}}
+						<label>Innehållsinformation</label>
+						{{#if product.ingredients.contains_eggs}}
+							<p>Innehåller ägg.</p>
+						{{/if}}
+						{{#if product.ingredients.contains_animal_milk}}
+							<p>Innehåller mjölkprodukter.</p>
+						{{/if}}
+						{{#if product.ingredients.contains_animal_ingredients}}
+							<p>Innehåller animaliska ingredienser.</p>
+						{{/if}}
+						{{#if product.other.contains_traces_of_eggs}}
+							<p>Kan innehålla spår av ägg.</p>
+						{{/if}}
+						{{#if product.other.contains_traces_of_milk}}
+							<p>Kan innehålla spår av mjölk.</p>
+						{{/if}}
+						{{#if product.ingredients.additives_may_come_from_animal_origin}}
+							<p>Produkten innehåller ingredienser som i sällsynta fall har animaliskt ursprung.</p>
+						{{/if}}
 						<div class="row">
 							<div class="col {{glutenFreeClass}}"><img src="/images/icon-glutenfree.png" /></div>
 							<div class="col {{organicClass}}"><img src="/images/icon-organic.png" /></div>
@@ -46,7 +74,11 @@
 					{{/ionItem}}
 				{{/ionList}}
 			{{else}}
-				{{> addProductScreen}}
+				<div class="padding center">
+					<h2>Vi hittade inte produkten!</h2>
+					<p>Produkten kunde tyvärr inte hittas i vår databas men du får gärna hjälpa oss genom att fylla i ett enkelt formulär. På så sätt skapar vi tillsammans en komplett databas som kan hjälpa andra som vill äta 100% veganskt.</p>
+					<button id="addproduct-button" class="button button-calm" data-ion-modal="addProductModal">Lägg till produkten</button>
+				</div>
 			{{/if}}
 		{{/ionContent}}
 	{{/ionView}}

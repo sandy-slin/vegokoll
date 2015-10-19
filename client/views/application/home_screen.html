@@ -1,28 +1,24 @@
 <template name="homeScreen">
 
-  	{{#contentFor "headerTitle"}}
-    	<h1 class="title">100% Vegan</h1>
-  	{{/contentFor}}
-
 	{{#ionView}}
 		{{#ionContent class="home-screen"}}
 			<div class="slider-wrapper">
 				{{#ionSlideBox showPager}}
 				  {{#ionSlide}}
 				  		<div>
-							<i class="icon ion-camera"></i>
+							<i class="icon ion-ios-camera-outline"></i>
 							<h1>Ta en bild av <br/>produktens steckkod</h1>
 						</div>
 					{{/ionSlide}}
 					{{#ionSlide}}
 				  		<div>
-							<i class="icon ion-ios-paper"></i>
+							<i class="icon ion-ios-paper-outline"></i>
 							<h1>Läs om vad <br/>produkten innehåller</h1>
 						</div>
 					{{/ionSlide}}
 					{{#ionSlide}}
 				  		<div>
-							<i class="icon ion-ios-nutrition"></i>
+							<i class="icon ion-ios-nutrition-outline"></i>
 							<h1>Ät och njut av <br/>din vegetariska mat</h1>
 						</div>
 					{{/ionSlide}}

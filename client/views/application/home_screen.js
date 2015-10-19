@@ -1,3 +1,9 @@
+Template.homeScreen.rendered = function(){
+	if (Meteor.isCordova) {
+		StatusBar.styleLightContent();
+	}
+};
+
 Template.homeScreen.events({
 	'click #take-photo-button': function(event) {
 

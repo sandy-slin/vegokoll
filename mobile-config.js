@@ -1,7 +1,7 @@
 App.info({
-	id: 'se.djurensratt.hundraprocentveganskt',
-	name: 'hundraprocentveganskt',
-	description: 'A app that let you check if a product is 100% vegan.',
+	id: 'se.djurensratt.vegokoll',
+	name: 'Vegokoll',
+	description: 'A app that let you check if a product is vegan or not.',
 	author: 'Djurens Rätt',
 	email: 'info@djurensratt.se',
 	website: 'http://www.djurensratt.se',

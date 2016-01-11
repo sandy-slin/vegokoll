@@ -10,12 +10,22 @@ Products.allow({
 	insert: function () {
 		return true;
 	},
-	remove: false,
-	update: false
+	remove: function () {
+		return false;
+	},
+	update: function () {
+		return false;
+	}
 });
 
 Categories.allow({
-	insert: false,
-	remove: false,
-	update: false
+	insert: function () {
+		return false;
+	},
+	remove: function () {
+		return false;
+	},
+	update: function () {
+		return false;
+	}
 });

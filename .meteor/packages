@@ -20,7 +20,6 @@ random
 ejson
 spacebars
 check
-meteoric:ionic-sass
-meteoric:ionicons-sass
 fourseven:scss
-meteoric:ionic
+hashwin:ionic-sass
+hashwin:ionicons-sass

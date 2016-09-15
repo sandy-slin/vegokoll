@@ -14,7 +14,7 @@ Products.allow({
 		return false;
 	},
 	update: function () {
-		return false;
+		return true;
 	}
 });
 

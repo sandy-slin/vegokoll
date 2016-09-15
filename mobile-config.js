@@ -5,7 +5,7 @@ App.info({
 	author: 'Djurens Rätt',
 	email: 'info@djurensratt.se',
 	website: 'http://www.djurensratt.se',
-	version: '1.0'
+	version: '1.0.2'
 });
 
 App.setPreference('StatusBarOverlaysWebView', 'true');

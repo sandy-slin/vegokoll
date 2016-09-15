@@ -21,10 +21,11 @@ App.icons({
 	'ipad_2x': 'public/assets/iOS/Resources/icons/Icon-152.png',
 
 	// Android
-	'android_ldpi': 'public/assets/Android/res/drawable-ldpi/icon.png',
 	'android_mdpi': 'public/assets/Android/res/drawable-mdpi/icon.png',
 	'android_hdpi': 'public/assets/Android/res/drawable-hdpi/icon.png',
-	'android_xhdpi': 'public/assets/Android/res/drawable-xhdpi/icon.png'
+	'android_xhdpi': 'public/assets/Android/res/drawable-xhdpi/icon.png',
+	'android_xxhdpi': 'public/assets/Android/res/drawable-xxhdpi/icon.png',
+	'android_xxxhdpi': 'public/assets/Android/res/drawable-xxxhdpi/icon.png'
 });
 
 App.launchScreens({
@@ -40,13 +41,11 @@ App.launchScreens({
 	'ipad_landscape_2x': 'public/assets/iOS/Resources/splash/Default-Landscape@2x~ipad_2048x1536.png',
 
 	// Android
-	'android_ldpi_portrait': 'public/assets/Android/res/drawable-ldpi/screen.png',
-	'android_ldpi_landscape': 'public/assets/Android/res/drawable-land-ldpi/screen.png',
 	'android_mdpi_portrait': 'public/assets/Android/res/drawable-mdpi/screen.png',
 	'android_mdpi_landscape': 'public/assets/Android/res/drawable-land-mdpi/screen.png',
 	'android_hdpi_portrait': 'public/assets/Android/res/drawable-hdpi/screen.png',
 	'android_hdpi_landscape': 'public/assets/Android/res/drawable-land-hdpi/screen.png',
 	'android_xhdpi_portrait': 'public/assets/Android/res/drawable-xhdpi/screen.png',
-	'android_xhdpi_landscape': 'public/assets/Android/res/drawable-land-xhdpi/screen.png'
-
+	'android_xhdpi_landscape': 'public/assets/Android/res/drawable-land-xhdpi/screen.png',
+	'android_xxhdpi_portrait': 'public/assets/Android/res/drawable-xxhdpi/screen.png'
 });

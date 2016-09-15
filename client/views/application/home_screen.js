@@ -9,15 +9,15 @@ Template.homeScreen.events({
 
 		if (Meteor.isCordova) {
 			cordova.plugins.barcodeScanner.scan(
-	            function (result) {
-	            	if( parseInt(result.cancelled) != 1 ){
+				function (result) {
+					if( result.cancelled != true ){
 						Router.go('productScreen', {gtin: result.text} );
-	            	}
-	            }, 
-	            function (error) {
-	                alert("Scanning failed: " + error);
-	            }
-	        );
+					}
+				}, 
+				function (error) {
+					alert("Scanning failed: " + error);
+				}
+			);
 		} else {
 			var gtin = prompt("Your browser does not have support for Cordova barcodeScanner. Please enter the EAN-code:");
 			if (gtin != null) {

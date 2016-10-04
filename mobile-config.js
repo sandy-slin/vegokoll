@@ -1,11 +1,11 @@
 App.info({
 	id: 'se.djurensratt.vegokoll',
-	name: 'Vegokoll',
+	name: 'hundraprocentveganskt',
 	description: 'A app that let you check if a product is vegan or not.',
 	author: 'Djurens Rätt',
 	email: 'info@djurensratt.se',
 	website: 'http://www.djurensratt.se',
-	version: '1.0.2'
+	version: '1.0.4'
 });
 
 App.setPreference('StatusBarOverlaysWebView', 'true');
@@ -15,6 +15,7 @@ App.accessRule('*');
 
 App.icons({
 	// iOS
+	'iphone': 'public/assets/iOS/Resources/icons/Icon-60.png',
 	'iphone_2x': 'public/assets/iOS/Resources/icons/Icon-120.png',
 	'iphone_3x': 'public/assets/iOS/Resources/icons/Icon-180@3x.png',
 	'ipad': 'public/assets/iOS/Resources/icons/Icon-76.png',
@@ -30,6 +31,7 @@ App.icons({
 
 App.launchScreens({
 	// iOS
+	'iphone': 'public/assets/iOS/Resources/splash/Default.png',
 	'iphone_2x': 'public/assets/iOS/Resources/splash/Default@2x~iphone_640x960.png',
 	'iphone5': 'public/assets/iOS/Resources/splash/Default-568h@2x~iphone_640x1136.png',
 	'iphone6': 'public/assets/iOS/Resources/splash/Default-750@2x~iphone6-portrait_750x1334.png',

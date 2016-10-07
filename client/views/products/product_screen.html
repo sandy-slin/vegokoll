@@ -18,6 +18,12 @@
 		{{/ionSubheaderBar}}
 		{{/if}}
 
+		{{#if productFlagged}}
+		{{#ionSubheaderBar class="bar-assertive"}}
+			<h2 class="title">Anmäld som felaktig!</h2>
+		{{/ionSubheaderBar}}
+		{{/if}}
+
 		{{#ionContent class="product-screen"}}
 			{{#if foundProduct}}
 				{{#ionList class="product"}}
@@ -72,6 +78,13 @@
 							<div class="col {{lactoseClass}}"><img src="/images/icon-lactosefree.png" /></div>
 						</div>
 					{{/ionItem}}
+
+					{{#if productFlagged}}
+					{{else}}
+					<div class="item">
+						<button class="button button-flag button-full button-outline button-assertive">Anmäl felaktig</button>
+					</div>
+					{{/if}}
 				{{/ionList}}
 			{{else}}
 				<div class="padding center">

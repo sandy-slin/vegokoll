@@ -18,6 +18,13 @@ Template.productScreen.helpers({
 		else
 			return false;
 	},
+	productFlagged: function () {
+		var product = this.product;
+		if ( product && product.flagged == true )
+			return true;
+		else
+			return false;
+	},
 	veganOrNot: function () {
 		var product = this.product;
 		if ( product.hundred_procent_vegan == true )
@@ -30,8 +37,6 @@ Template.productScreen.helpers({
 			return 'icon-novegan.png';
 		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin != true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients != true ) )
 			return 'icon-vegan.png';
-		else if ( product.manufacturer_confirms_vegan || ( product.ingredients.additives_may_come_from_animal_origin == true && product.ingredients.contains_animal_additives != true && product.ingredients.contains_eggs != true && product.ingredients.contains_animal_milk != true && product.ingredients.contains_animal_ingredients  != true ) )
-			return 'icon-maybe-vegan.png';
 		else
 			return 'icon-novegan.png';
 	},
@@ -80,5 +85,21 @@ Template.productScreen.helpers({
 	categoryName: function () {
 		var category = Categories.findOne({code: this.product.category});
 		return category.name;
+	}
+});
+
+Template.productScreen.events({
+	'click .button-flag': function ( event ) {
+		var _this = this;
+		IonPopup.confirm({
+			title: 'Är du säkert?',
+			template: 'Dubbelkolla gärna om produktinformationen verkligen är felaktig innan du fortsätter.',
+			onOk: function() {
+				Meteor.call('flagproduct', _this.product);
+			},
+			onCancel: function() {
+				return false;
+			}
+		});
 	}
 });
